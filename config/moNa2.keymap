@@ -64,6 +64,7 @@
 
             tap-ms = <20>;
         };
+
         tog_on: toggle_layer_on_only {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -84,10 +85,10 @@
 
         mac_default_layer {
             bindings = <
-&kp ESC             &kp LG(W)     &kp LG(E)     &kp LG(R)  &kp TAB                                       &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
-&mt CAPSLOCK LG(A)  &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &kp LG(KP_N0)     &none          &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
-&mt RCTRL LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPS LANG2    &kp LANG1      &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5         &mkp MB2
-&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5             &kp BACKSPACE  &kp ENTER                                                           &mt RCTRL DEL
+&kp ESC             &kp LG(W)     &kp LG(E)     &kp LG(R)  &kp TAB                                             &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
+&mt CAPSLOCK LG(A)  &kp LG(S)     &kp LG(D)     &kp LG(F)  &kp LG(G)    &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
+&mt RCTRL LG(Z)     &kp LG(X)     &kp LG(C)     &kp LG(V)  &kp LG(B)    &mt CAPS LANG2    &kp LANG1            &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5         &mkp MB2
+&kp LEFT_SHIFT      &kp LEFT_WIN  &kp LEFT_ALT  &mo 3      &lt 2 SPACE  &mo 5             &kp BACKSPACE        &kp ENTER                                                           &mt RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
