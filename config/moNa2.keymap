@@ -16,7 +16,7 @@
         compatible = "zmk,combos";
 
         user {
-            bindings = <&none>;
+            bindings = <&user>;
             key-positions = <39 41>;
         };
 
