@@ -29,6 +29,11 @@
             bindings = <&mo 6>;
             key-positions = <11 37>;
         };
+
+        toggle_input {
+            bindings = <&tog 5>;
+            key-positions = <39 38>;
+        };
     };
 
     macros {
