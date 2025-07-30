@@ -149,7 +149,7 @@
 &kp Q           &kp W         &kp E         &kp R  &kp T                                               &kp Y      &kp U  &mt F13 I  &kp O    &mt F14 P
 &kp A           &kp S         &kp D         &kp F  &kp G        &none             &kp LG(KP_NUMBER_0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C         &kp V  &kp B        &mt CAPS LANG2    &kp LANG1            &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &lt 5 SPACE  &trans            &kp BACKSPACE        &kp ENTER                             &kp DEL
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &lt 4 SPACE  &trans            &kp BACKSPACE        &kp ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
