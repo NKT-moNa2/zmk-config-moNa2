@@ -236,7 +236,7 @@
         iphone_simbol_layer {
             bindings = <
 &kp EXCLAMATION  &kp AT       &kp HASH           &kp DOLLAR  &kp PERCENT                    &kp CARET         &kp AMPERSAND  &kp ASTRK          &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET
-&kp QUESTION     &kp KP_PLUS  &kp DOUBLE_QUOTES  &kp MINUS   &kp CARET    &trans    &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp RIGHT_BRACKET  &none                 &kp LS(MINUS)
+&kp QUESTION     &kp KP_PLUS  &kp DOUBLE_QUOTES  &kp MINUS   &kp CARET    &trans    &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp RIGHT_BRACKET  &kp GRAVE             &kp LS(MINUS)
 &none            &none        &none              &none       &none        &trans    &trans  &none             &none          &kp EXCLAMATION    &kp QUESTION          &trans
 &trans           &trans       &trans             &trans      &trans       &trans    &trans  &trans                                                                    &trans
             >;
