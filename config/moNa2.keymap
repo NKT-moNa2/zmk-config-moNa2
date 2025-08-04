@@ -50,7 +50,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 4 &tog_off 0 &tog_off 5 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 1>,
+                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9 &tog_off 10 &tog_off 11 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 0>,
                 <&macro_wait_time 500>,
@@ -59,30 +59,30 @@
             label = "BT_MAC";
         };
 
-        bt_ipad: bt_ipad {
+        bt_ipad: bt_ipad2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 4 &tog_off 0 &tog_off 5 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 1>,
+                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9 &tog_off 10 &tog_off 11 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 1>,
                 <&macro_wait_time 500>,
                 <&tog_on 1>;
 
-            label = "BT_IPAD";
+            label = "BT_IPAD2";
         };
 
-        bt_iphone: bt_iphone {
+        bt_iphone: bt_iphone2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 4 &tog_off 0 &tog_off 5 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 1>,
+                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9 &tog_off 10 &tog_off 11 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 2>,
                 <&macro_wait_time 500>,
-                <&tog_on 1>;
+                <&tog_on 9>;
 
-            label = "BT_IPHONE";
+            label = "BT_IPHONE2";
         };
     };
 
@@ -208,6 +208,37 @@
 &none  &none  &none  &none  &none  &none    &none  &bt BT_SEL 3  &bt BT_SEL 4  &none       &none  &none
 &none  &none  &none  &none  &none  &none    &none  &bt_mac       &bt_ipad      &bt_iphone  &none  &bt BT_CLR
 &none  &none  &none  &none  &none  &none    &none  &none                                          &bt BT_CLR_ALL
+            >;
+        };
+
+        iphone_shortcut {
+            bindings = <
+&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp TAB                                                 &none          &kp LG(LS(NUMBER_3))   &none     &kp UP_ARROW  &none
+&kp LG(A)        &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)     &none                &kp LG(KP_NUMBER_0)  &kp LG(H)      &kp LG(RIGHT_BRACKET)  &kp LEFT  &kp DOWN      &kp RIGHT
+&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)     &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 5         &mkp MB2
+&kp LSHFT        &kp LGUI   &kp LALT   &mo 6      &lt 11 SPACE  &mo 10               &kp BSPC             &kp ENTER                                                     &kp DEL
+            >;
+
+            sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
+        };
+
+        iphone_input {
+            bindings = <
+&kp Q           &kp W         &kp E         &kp R  &kp T                                                   &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A           &kp S         &kp D         &kp F  &kp G         &none                &kp LG(KP_NUMBER_0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C         &kp V  &kp B         &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &lt 11 SPACE  &mo 10               &kp BACKSPACE        &kp ENTER                             &kp DEL
+            >;
+
+            sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
+        };
+
+        iphone_simbol_layer {
+            bindings = <
+&kp EXCLAMATION  &kp AT       &kp HASH           &kp DOLLAR  &kp PERCENT                    &kp CARET         &kp AMPERSAND  &kp ASTRK          &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET
+&kp QUESTION     &kp KP_PLUS  &kp DOUBLE_QUOTES  &kp MINUS   &kp CARET    &trans    &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp RIGHT_BRACKET  &none                 &kp LS(MINUS)
+&none            &none        &none              &none       &none        &trans    &trans  &none             &none          &kp EXCLAMATION    &kp QUESTION          &trans
+&trans           &trans       &trans             &trans      &trans       &trans    &trans  &trans                                                                    &trans
             >;
         };
     };
