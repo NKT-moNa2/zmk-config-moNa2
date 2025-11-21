@@ -20,14 +20,19 @@
             key-positions = <39 41>;
         };
 
-        function {
-            bindings = <&mo 10>;
-            key-positions = <13 37>;
-        };
-
         setting {
             bindings = <&mo 11>;
             key-positions = <11 37>;
+        };
+
+        user2 {
+            bindings = <&user2>;
+            key-positions = <39 40>;
+        };
+
+        function {
+            bindings = <&mo 10>;
+            key-positions = <13 37>;
         };
     };
 
@@ -84,6 +89,13 @@
 
             label = "BT_IPHONE2";
         };
+
+        user2: user2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp CAPS &kp A &kp CAPS &kp Z &kp U &kp R &kp E &kp KP_NUMBER_6 &kp KP_NUMBER_9 &kp M &kp H &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp Z &kp LANG1>;
+            label = "USER2";
+        };
     };
 
     behaviors {
@@ -124,10 +136,10 @@
 
         mac_shortcut_layer {
             bindings = <
-&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp TAB                                             &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
-&kp LG(A)        &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
-&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)    &mt CAPS LANG2    &kp LANG1            &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 8         &mkp MB2
-&kp LSHFT        &kp LGUI   &kp LALT   &mo 9      &lt 6 SPACE  &mo 3             &kp BSPC             &kp ENTER                                                           &kp DELETE
+&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)     &kp TAB                                             &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
+&kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 10 LG(F)  &kp LG(G)    &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
+&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)     &kp LG(B)    &mt CAPS LANG2    &kp LANG1            &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 8         &mkp MB2
+&kp LSHFT        &kp LGUI   &kp LALT   &mo 9         &lt 6 SPACE  &mo 3             &kp BSPC             &kp ENTER                                                           &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
@@ -217,19 +229,19 @@
 
         number {
             bindings = <
-&none   &none   &none   &none   &none                         &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp KP_PLUS
-&none   &none   &none   &none   &none   &none     &kp KP_NUM  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &kp KP_MINUS
-&none   &none   &none   &none   &none   &none     &none       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_SLASH
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans                                                              &kp KP_MULTIPLY
+&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none   &none                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp KP_PLUS
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none   &none   &none     &kp KP_COMMA  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT    &kp KP_MINUS
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none   &none     &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0     &kp KP_SLASH
+&kp KP_COMMA     &kp KP_N0        &kp KP_DOT       &trans  &trans  &trans    &trans        &trans                                                           &kp KP_MULTIPLY
             >;
         };
 
         function {
             bindings = <
-&none   &none   &none   &none   &none                     &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&none   &none   &none   &none   &none   &none     &none   &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&none   &none   &none   &none   &none   &none     &none   &kp F11  &kp F12  &none   &none   &none
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                            &none
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&kp F11  &kp F12  &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
+&none    &none    &none   &none   &none   &none     &none   &none   &none   &none   &none   &none
+&trans   &trans   &trans  &trans  &trans  &trans    &trans  &trans                          &none
             >;
         };
 
