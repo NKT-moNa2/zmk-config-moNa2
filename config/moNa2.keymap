@@ -93,8 +93,15 @@
         user2: user2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LANG2 &kp CAPS &kp A &kp CAPS &kp Z &kp U &kp R &kp E &kp KP_NUMBER_6 &kp KP_NUMBER_9 &kp M &kp H &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp Z &kp LANG1>;
+            bindings = <&kp LANG2 &kp LS(A) &kp Z &kp U &kp R &kp E &kp KP_NUMBER_6 &kp KP_NUMBER_9 &kp M &kp H &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp Z &kp LANG1>;
             label = "USER2";
+        };
+
+        conma: conma {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp COMMA &kp LANG1>;
+            label = "CONMA";
         };
     };
 
@@ -229,10 +236,10 @@
 
         number {
             bindings = <
-&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none   &none                           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp KP_PLUS
-&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none   &none   &none     &kp KP_COMMA  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT    &kp KP_MINUS
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none   &none     &kp KP_N0     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0     &kp KP_SLASH
-&kp KP_COMMA     &kp KP_N0        &kp KP_DOT       &trans  &trans  &trans    &trans        &trans                                                           &kp KP_MULTIPLY
+&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none   &none                        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp KP_PLUS
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none   &none   &none     &conma     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT    &kp KP_MINUS
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none   &none     &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0     &kp KP_SLASH
+&kp KP_COMMA     &kp KP_N0        &kp KP_DOT       &trans  &trans  &trans    &trans     &trans                                                           &kp KP_MULTIPLY
             >;
         };
 
