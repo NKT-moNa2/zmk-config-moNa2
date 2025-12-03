@@ -21,7 +21,7 @@
         };
 
         setting {
-            bindings = <&mo 11>;
+            bindings = <&mo 8>;
             key-positions = <11 37>;
         };
 
@@ -31,7 +31,7 @@
         };
 
         function {
-            bindings = <&mo 10>;
+            bindings = <&mo 7>;
             key-positions = <13 37>;
         };
     };
@@ -40,7 +40,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 8 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
 
@@ -55,7 +55,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9 &tog_off 0>,
+                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 0>,
                 <&macro_wait_time 500>,
@@ -68,7 +68,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9 &tog_off 0>,
+                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 1>,
                 <&macro_wait_time 500>,
@@ -81,11 +81,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 7 &tog_off 8 &tog_off 9 &tog_off 0>,
+                <&tog_off 1 &tog_off 2 &tog_off 3 &tog_off 4 &tog_off 5 &tog_off 6 &tog_off 0>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 2>,
                 <&macro_wait_time 500>,
-                <&tog_on 2>;
+                <&tog_on 1>;
 
             label = "BT_IPHONE2";
         };
@@ -143,10 +143,10 @@
 
         mac_shortcut_layer {
             bindings = <
-&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)     &kp TAB                                             &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
-&kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 10 LG(F)  &kp LG(G)    &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
-&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)     &kp LG(B)    &mt CAPS LANG2    &kp LANG1            &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 8         &mkp MB2
-&kp LSHFT        &kp LGUI   &kp LALT   &mo 9         &lt 6 SPACE  &mo 3             &kp BSPC             &kp ENTER                                                           &kp DELETE
+&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)    &kp TAB                                             &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
+&kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 7 LG(F)  &kp LG(G)    &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
+&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LG(B)    &mt CAPS LANG2    &kp LANG1            &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5         &mkp MB2
+&kp LSHFT        &kp LGUI   &kp LALT   &mo 6        &lt 4 SPACE  &mo 2             &kp BSPC             &kp ENTER                                                           &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
@@ -156,19 +156,8 @@
             bindings = <
 &kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp TAB                                                &none          &kp LG(LS(NUMBER_3))   &none     &kp UP_ARROW  &none
 &kp LG(A)        &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &none                &kp LG(KP_NUMBER_0)  &kp LG(H)      &kp LG(RIGHT_BRACKET)  &kp LEFT  &kp DOWN      &kp RIGHT
-&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 8         &mkp MB2
-&kp LSHFT        &kp LGUI   &kp LALT   &mo 9      &lt 6 SPACE  &mo 4                &kp BSPC             &kp ENTER                                                     &kp DEL
-            >;
-
-            sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
-        };
-
-        iphone_shortcut {
-            bindings = <
-&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp TAB                                                &none          &kp LG(LS(NUMBER_3))   &none     &kp UP_ARROW  &none
-&kp LG(A)        &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &none                &kp LG(KP_NUMBER_0)  &kp LG(H)      &kp LG(RIGHT_BRACKET)  &kp LEFT  &kp DOWN      &kp RIGHT
-&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 8         &mkp MB2
-&kp LSHFT        &kp LGUI   &kp LALT   &mo 9      &lt 7 SPACE  &mo 5                &kp BSPC             &kp ENTER                                                     &kp DEL
+&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 5         &mkp MB2
+&kp LSHFT        &kp LGUI   &kp LALT   &mo 6      &lt 4 SPACE  &mo 3                &kp BSPC             &kp ENTER                                                     &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_PLUS) LG(KP_MINUS)>;
@@ -179,7 +168,7 @@
 &kp Q           &kp W         &kp E         &kp R  &kp T                                               &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S         &kp D         &kp F  &kp G        &none             &kp LG(KP_NUMBER_0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C         &kp V  &kp B        &mt CAPS LANG2    &kp LANG1            &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 9  &lt 6 SPACE  &trans            &kp BACKSPACE        &kp ENTER                             &kp DEL
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &lt 4 SPACE  &trans            &kp BACKSPACE        &kp ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
@@ -190,18 +179,7 @@
 &kp Q           &kp W         &kp E         &kp R  &kp T                                                  &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S         &kp D         &kp F  &kp G        &none                &kp LG(KP_NUMBER_0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
 &kp Z           &kp X         &kp C         &kp V  &kp B        &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 9  &lt 6 SPACE  &trans               &kp BACKSPACE        &kp ENTER                             &kp DEL
-            >;
-
-            sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
-        };
-
-        iphone_input {
-            bindings = <
-&kp Q           &kp W         &kp E         &kp R  &kp T                                                  &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A           &kp S         &kp D         &kp F  &kp G        &none                &kp LG(KP_NUMBER_0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C         &kp V  &kp B        &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 9  &lt 7 SPACE  &trans               &kp BACKSPACE        &kp ENTER                             &kp DEL
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 6  &lt 4 SPACE  &trans               &kp BACKSPACE        &kp ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
@@ -213,15 +191,6 @@
 &kp QUESTION     &kp KP_PLUS        &kp ASTERISK  &kp MINUS   &kp CARET    &trans    &trans  &kp COLON      &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE
 &none            &none              &none         &none       &none        &trans    &trans  &none          &none          &kp EXCLAMATION       &kp QUESTION           &trans
 &trans           &trans             &trans        &trans      &trans       &trans    &trans  &trans                                                                     &trans
-            >;
-        };
-
-        iphone_simbol_layer {
-            bindings = <
-&kp EXCLAMATION  &kp AT       &kp HASH           &kp DOLLAR  &kp PERCENT                    &kp CARET         &kp AMPERSAND  &kp ASTRK          &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET
-&kp QUESTION     &kp KP_PLUS  &kp DOUBLE_QUOTES  &kp MINUS   &kp CARET    &trans    &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp RIGHT_BRACKET  &kp GRAVE             &kp LS(MINUS)
-&none            &none        &none              &none       &none        &trans    &trans  &none             &none          &kp EXCLAMATION    &kp QUESTION          &trans
-&trans           &trans       &trans             &trans      &trans       &trans    &trans  &trans                                                                    &trans
             >;
         };
 
