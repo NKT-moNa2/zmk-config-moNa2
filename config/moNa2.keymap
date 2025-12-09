@@ -143,10 +143,10 @@
 
         mac_shortcut_layer {
             bindings = <
-&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)    &kp TAB                                             &kp LC(UP_ARROW)   &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
-&kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 7 LG(F)  &kp LG(G)    &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)      &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
-&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LG(B)    &mt CAPS LANG2    &kp LANG1            &kp LA(LS(LG(L)))  &kp LG(LEFT)   &mkp MB1            &mo 5         &mkp MB2
-&kp LSHFT        &kp LGUI   &kp LALT   &mo 6        &lt 4 SPACE  &mo 2             &kp BSPC             &kp ENTER                                                           &kp DELETE
+&kp ESC          &kp LG(M)  &kp LG(P)  &kp LG(R)    &kp TAB                                                   &kp LC(UP_ARROW)  &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
+&kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 7 LG(F)  &kp LA(LS(LG(L)))  &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)     &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
+&mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPS LANG2    &kp LANG1            &kp LG(U)         &kp LG(LEFT)   &mkp MB1            &mo 5         &mkp MB2
+&kp LSHFT        &kp LGUI   &kp LALT   &mo 6        &lt 4 SPACE        &mo 2             &kp BSPC             &kp ENTER                                                          &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
@@ -154,7 +154,7 @@
 
         ipad_shortcut_layer {
             bindings = <
-&kp ESC          &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp TAB                                                &none          &kp LG(LS(NUMBER_3))   &none     &kp UP_ARROW  &none
+&kp ESC          &kp LG(W)  &none      &kp LG(R)  &kp TAB                                                &none          &kp LG(LS(NUMBER_3))   &none     &kp UP_ARROW  &none
 &kp LG(A)        &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LG(G)    &none                &kp LG(KP_NUMBER_0)  &kp LG(H)      &kp LG(RIGHT_BRACKET)  &kp LEFT  &kp DOWN      &kp RIGHT
 &mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)    &kp LC(LS(SPACE))    &kp LC(LS(SPACE))    &kp LG(LA(D))  &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 5         &mkp MB2
 &kp LSHFT        &kp LGUI   &kp LALT   &mo 6      &lt 4 SPACE  &mo 3                &kp BSPC             &kp ENTER                                                     &kp DEL
