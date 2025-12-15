@@ -143,7 +143,7 @@
 
         mac_shortcut_layer {
             bindings = <
-&kp ESC          &kp LG(M)  &kp LG(P)  &kp LG(R)    &kp TAB                                                   &kp LC(UP_ARROW)  &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
+&kp ESC          &kp LG(W)  &kp LG(P)  &kp LG(R)    &kp TAB                                                   &kp LC(UP_ARROW)  &kp F15        &mt F13 LEFT_SHIFT  &kp UP_ARROW  &mt F14 LEFT_SHIFT
 &kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 7 LG(F)  &kp LA(LS(LG(L)))  &none             &kp LG(KP_NUMBER_0)  &kp LG(SPACE)     &kp LG(RIGHT)  &kp LEFT            &kp DOWN      &kp RIGHT
 &mt RCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPS LANG2    &kp LANG1            &kp LG(U)         &kp LG(LEFT)   &mkp MB1            &mo 5         &mkp MB2
 &kp LSHFT        &kp LGUI   &kp LALT   &mo 6        &lt 4 SPACE        &mo 2             &kp BSPC             &kp ENTER                                                          &kp DELETE
@@ -205,10 +205,10 @@
 
         number {
             bindings = <
-&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none   &none                        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp KP_PLUS
-&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none   &none   &none     &conma     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT    &kp KP_MINUS
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none   &none   &none     &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0     &kp KP_SLASH
-&kp KP_COMMA     &kp KP_N0        &kp KP_DOT       &trans  &trans  &trans    &trans     &trans                                                           &kp KP_MULTIPLY
+&none  &none  &none  &none   &none                        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp KP_PLUS
+&none  &none  &none  &none   &none   &none     &conma     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT    &kp KP_MINUS
+&none  &none  &none  &none   &none   &none     &kp KP_N0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_N0     &kp KP_SLASH
+&none  &none  &none  &trans  &trans  &trans    &trans     &trans                                                           &kp KP_MULTIPLY
             >;
         };
 
