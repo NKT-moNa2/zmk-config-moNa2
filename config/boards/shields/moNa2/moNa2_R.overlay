@@ -16,6 +16,10 @@ excluded-positions = <
         device = <&trackball>;
 
         input-processors = <&zip_temp_layer 5 100000>;
+
+        scroller {
+        layers = <1　6>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
     };
 };
 
