@@ -13,7 +13,19 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        username {
+            bindings = <&username>;
+            key-positions = <38 39>;
+        };
+
+        username2 {
+            bindings = <&username2>;
+            key-positions = <38 40>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -21,6 +33,20 @@
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        username: username {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp A &kp Z &kp U &kp R &kp E &kp KP_NUMBER_6 &kp KP_NUMBER_1 &kp KP_NUMBER_4 &kp LANG1>;
+            label = "USERNAME";
+        };
+
+        username2: username2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANG2 &kp LS(A) &kp Z &kp U &kp R &kp E &kp KP_NUMBER_6 &kp KP_NUMBER_9 &kp M &kp H &kp KP_NUMBER_5 &kp KP_NUMBER_2 &kp Z &kp LANG1>;
+            label = "USERNAME2";
         };
     };
 
@@ -48,10 +74,10 @@
 
         default {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R    &kp T                                             &kp Y      &kp U  &mt F13 I  &kp O    &mt F14 P
-&kp A           &kp S         &kp D         &lt 4 F  &kp G                              &kp LG(KP_N0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C         &kp V    &kp B        &mt CAPSLOCK LANG2    &kp LANG1      &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1    &lt 2 SPACE  &mo 0                 &kp BACKSPACE  &kp ENTER                             &kp DEL
+&kp Q           &kp W         &kp E         &kp R  &kp T                                             &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A           &kp S         &kp D         &kp F  &kp G                              &kp LG(KP_N0)  &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z           &kp X         &kp C         &kp V  &kp B        &mt CAPSLOCK LANG2    &kp LANG1      &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3  &lt 2 SPACE  &mo 1                 &kp BACKSPACE  &kp ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) LG(KP_PLUS)>;
@@ -59,10 +85,10 @@
 
         shortcut_layer {
             bindings = <
-&kp ESC          &kp LG(W)  &kp LG(P)  &kp LG(R)  &kp TAB                              &kp LC(UP)  &kp F15                &none     &kp UP    &none
-&kp LG(A)        &kp LG(S)  &kp LG(D)  &kp LG(F)  &kp LA(LS(LG(L)))            &trans  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT  &kp DOWN  &kp RIGHT
-&mt LCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)          &trans    &trans  &kp LG(U)   &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 6     &mkp MB2
-&trans           &trans     &trans     &trans     &trans             &trans    &trans  &trans                                                 &trans
+&kp ESC          &kp LG(W)  &kp LG(P)  &kp LG(R)    &kp TAB                              &kp LC(UP)  &kp F15                &kp F13   &kp UP    &kp F14
+&kp LG(A)        &kp LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))            &trans  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT  &kp DOWN  &kp RIGHT
+&mt LCTRL LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)    &kp LG(B)          &trans    &trans  &kp LG(U)   &kp LG(LEFT_BRACKET)   &mkp MB1  &mo 6     &mkp MB2
+&trans           &trans     &trans     &trans       &trans             &trans    &trans  &trans                                                 &trans
             >;
         };
 
