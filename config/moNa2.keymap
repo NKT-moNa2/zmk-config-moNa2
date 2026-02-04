@@ -73,10 +73,10 @@
 
         default {
             bindings = <
-&kp ESC          &kp LG(W)    &kp LG(P)  &kp LG(R)    &kp TAB                                                       &kp LC(UP)  &kp F15                &mt F13 LEFT_SHIFT  &kp UP    &mt F14 LEFT_SHIFT
-&kp LG(A)        &lt 7 LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))                        &kp LG(KP_NUMBER_0)  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT            &kp DOWN  &kp RIGHT
-&mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPSLOCK LANG2    &kp LANG1            &kp LG(U)   &kp LG(LEFT_BRACKET)   &mkp MB1            &mo 1     &mkp MB2
-&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE        &mo 6                 &kp BSPC             &kp ENTER                                                        &kp DELETE
+&kp ESC          &kp LG(W)    &kp LG(P)  &kp LG(R)    &kp TAB                                                       &kp LC(UP)           &kp F15                &mt F13 LEFT_SHIFT  &kp UP    &mt F14 LEFT_SHIFT
+&kp LG(A)        &lt 7 LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))                        &kp LG(KP_NUMBER_0)  &mt LG(H) LG(SPACE)  &kp LG(RIGHT_BRACKET)  &kp LEFT            &kp DOWN  &kp RIGHT
+&mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPSLOCK LANG2    &kp LANG1            &kp LG(U)            &kp LG(LEFT_BRACKET)   &mkp MB1            &mo 1     &mkp MB2
+&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE        &mo 6                 &kp BSPC             &kp ENTER                                                                 &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
@@ -102,10 +102,10 @@
 
         number {
             bindings = <
-&none   &none   &none   &none   &none                              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL  &kp KP_PLUS
-&none   &none   &none   &none   &none             &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_COMMA  &kp KP_MINUS
-&none   &none   &none   &none   &none   &trans    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &kp KP_SLASH
-&trans  &trans  &trans  &trans  &trans  &trans    &trans           &trans                                                           &kp KP_ASTERISK
+&none   &none   &none   &none   &none                              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_COMMA     &kp KP_PLUS
+&none   &none   &none   &none   &none             &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &kp KP_MINUS
+&none   &none   &none   &none   &none   &trans    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_SLASH
+&trans  &trans  &trans  &trans  &trans  &trans    &trans           &trans                                                              &kp KP_ASTERISK
             >;
         };
 
@@ -145,6 +145,17 @@
 &none  &none  &none  &none  &none  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR
 &none  &none  &none  &none  &none  &none    &none  &none                                            &bt BT_CLR_ALL
             >;
+        };
+
+        ipad_default {
+            bindings = <
+&kp ESC          &kp LG(W)    &kp LG(P)  &kp LG(R)    &kp TAB                                                           &kp LC(UP)  &kp F15                &mt F13 LEFT_SHIFT  &kp UP    &mt F14 LEFT_SHIFT
+&kp LG(A)        &lt 7 LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))                            &kp LG(KP_NUMBER_0)  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT            &kp DOWN  &kp RIGHT
+&mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPSLOCK LG(SPACE)    &kp LC(SPACE)        &kp LG(U)   &kp LG(LEFT_BRACKET)   &mkp MB1            &mo 1     &mkp MB2
+&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE        &mo 6                     &kp BSPC             &kp ENTER                                                        &kp DELETE
+            >;
+
+            sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
         };
     };
 };
