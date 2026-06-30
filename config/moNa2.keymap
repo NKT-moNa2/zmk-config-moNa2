@@ -55,9 +55,9 @@
                 <&kp LG(C)>,
                 <&macro_wait_time 20>,
                 <&kp LG(T)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 200>,
                 <&kp LG(L)>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 50>,
                 <&kp LG(V)>,
                 <&macro_wait_time 200>,
                 <&kp ENTER>;
