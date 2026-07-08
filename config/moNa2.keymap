@@ -24,6 +24,11 @@
             bindings = <&username2>;
             key-positions = <38 40>;
         };
+
+        rightscroll {
+            bindings = <&mo 1>;
+            key-positions = <8 9>;
+        };
     };
 
     macros {
