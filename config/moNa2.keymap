@@ -91,15 +91,15 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default {
+        default_input {
             bindings = <
-&kp Q            &kp W        &kp LG(P)  &kp LG(R)    &kp TAB                                                      &kp LC(UP)           &kp F15                &mt F13 HOME  &kp UP    &mt F14 END
-&kp LG(A)        &lt 7 LG(S)  &kp LG(D)  &lt 4 LG(F)  &search_shortcut                        &kp LG(KP_NUMBER_0)  &mt LG(H) LG(SPACE)  &kp LG(RIGHT_BRACKET)  &kp LEFT      &kp DOWN  &kp RIGHT
-&mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)         &mt CAPSLOCK LANG2    &kp LANG1            &kp LG(U)            &kp LG(LEFT_BRACKET)   &mkp MB1      &mo 1     &mkp MB2
-&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE       &mo 6                 &kp BSPC             &kp ENTER                                                           &kp DELETE
+&kp Q           &kp W         &kp E         &kp R  &kp T                                             &kp Y      &kp U  &kp I     &kp O  &kp P
+&kp A           &kp S         &kp D         &kp F  &kp G                              &kp LG(HOME)   &kp H      &kp J  &kp K     &kp L  &kp MINUS
+&kp Z           &kp X         &kp C         &kp V  &kp B        &mt CAPSLOCK LANG2    &kp LANG1      &kp N      &kp M  &mkp MB1  &mo 1  &mkp MB2
+&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3  &lt 2 SPACE  &mo 6                 &kp BACKSPACE  &kp ENTER                          &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
+            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         };
 
         scroll {
@@ -142,20 +142,20 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &mkp MB1  &mo 0   &mkp MB2
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &mkp MB1  &mo 7   &mkp MB2
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                            &trans
             >;
         };
 
-        scroll_input {
+        scroll_shotrcut {
             bindings = <
-&kp Q           &kp W         &kp E         &kp R  &kp T                                             &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A           &kp S         &kp D         &kp F  &kp G                              &kp LG(HOME)   &kp H      &kp J  &kp K      &kp L    &kp MINUS
-&kp Z           &kp X         &kp C         &kp V  &kp B        &mt CAPSLOCK LANG2    &kp LANG1      &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_SHIFT  &kp LEFT_WIN  &kp LEFT_ALT  &mo 3  &lt 2 SPACE  &trans                &kp BACKSPACE  &kp ENTER                             &kp DEL
+&kp ESCAPE       &kp LG(W)    &kp LG(P)  &kp LG(R)    &kp TAB                                                      &kp LC(UP)           &kp F15                &mt F13 HOME  &kp UP      &mt F14 END
+&kp LG(A)        &lt 8 LG(S)  &kp LG(D)  &lt 4 LG(F)  &search_shortcut                        &kp LG(KP_NUMBER_0)  &mt LG(H) LG(SPACE)  &kp LG(RIGHT_BRACKET)  &kp LEFT      &kp DOWN    &kp RIGHT
+&mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)         &mt CAPSLOCK LANG2    &kp LANG1            &kp LG(U)            &kp LG(LEFT_BRACKET)   &kp COMMA     &kp PERIOD  &kp SLASH
+&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE       &mo 0                 &kp BSPC             &kp ENTER                                                             &kp DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
+            sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
         };
 
         setting {
@@ -170,9 +170,9 @@
         ipad_default {
             bindings = <
 &kp ESC          &kp LG(W)    &kp LG(P)  &kp LG(R)    &kp TAB                                                           &kp LC(UP)  &kp F15                &mt F13 LEFT_SHIFT  &kp UP    &mt F14 LEFT_SHIFT
-&kp LG(A)        &lt 7 LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))                            &kp LG(KP_NUMBER_0)  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT            &kp DOWN  &kp RIGHT
+&kp LG(A)        &lt 8 LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))                            &kp LG(KP_NUMBER_0)  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT            &kp DOWN  &kp RIGHT
 &mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPSLOCK LG(SPACE)    &kp LC(SPACE)        &kp LG(U)   &kp LG(LEFT_BRACKET)   &mkp MB1            &mo 1     &mkp MB2
-&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE        &mo 6                     &kp BSPC             &kp ENTER                                                        &kp DELETE
+&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE        &mo 0                     &kp BSPC             &kp ENTER                                                        &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
