@@ -67,6 +67,22 @@
 
             label = "SEARCH_SHORTCUT";
         };
+
+        winmode: winmode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 2>, <&macro_wait_time 200>, <&to 9>;
+
+            label = "WINMODE";
+        };
+
+        Macmode: Macmode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0>, <&macro_wait_time 200>, <&to 0>;
+
+            label = "MACMODE";
+        };
     };
 
     behaviors {
@@ -122,10 +138,10 @@
 
         number {
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                             &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp KP_PLUS
-&kp N6        &kp N7        &kp N8        &kp N9        &kp N0                  &kp KP_COMMA     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &kp KP_MINUS
-&none         &none         &none         &none         &none         &trans    &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_SLASH
-&trans        &trans        &trans        &trans        &trans        &trans    &trans           &trans                                                              &kp KP_ASTERISK
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL     &kp KP_PLUS
+&kp N6        &kp N7        &kp N8        &kp N9        &kp N0                  &kp KP_COMMA  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_DOT       &kp KP_MINUS
+&none         &none         &none         &none         &none         &trans    &kp KP_NLCK   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &kp KP_SLASH
+&trans        &trans        &trans        &trans        &trans        &trans    &trans        &trans                                                              &kp KP_ASTERISK
             >;
         };
 
@@ -160,10 +176,10 @@
 
         setting {
             bindings = <
-&none  &none  &none  &none  &none                  &none         &none         &none         &none  &none
-&none  &none  &none  &none  &none           &none  &none         &none         &none         &none  &none
-&none  &none  &none  &none  &none  &none    &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &bt BT_CLR
-&none  &none  &none  &none  &none  &none    &none  &none                                            &bt BT_CLR_ALL
+&none  &none  &none  &none  &none                  &none     &none         &none     &none  &none
+&none  &none  &none  &none  &none           &none  &none     &none         &none     &none  &none
+&none  &none  &none  &none  &none  &none    &none  &Macmode  &bt BT_SEL 1  &winmode  &none  &bt BT_CLR
+&none  &none  &none  &none  &none  &none    &none  &none                                    &bt BT_CLR_ALL
             >;
         };
 
@@ -173,6 +189,17 @@
 &kp LG(A)        &lt 7 LG(S)  &kp LG(D)  &lt 4 LG(F)  &kp LA(LS(LG(L)))                            &kp LG(KP_NUMBER_0)  &kp LG(H)   &kp LG(RIGHT_BRACKET)  &kp LEFT            &kp DOWN  &kp RIGHT
 &mt LCTRL LG(Z)  &kp LG(X)    &kp LG(C)  &kp LG(V)    &kp LG(B)          &mt CAPSLOCK LG(SPACE)    &kp LC(SPACE)        &kp LG(U)   &kp LG(LEFT_BRACKET)   &mkp MB1            &mo 1     &mkp MB2
 &kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE        &mo 6                     &kp BSPC             &kp ENTER                                                        &kp DELETE
+            >;
+
+            sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
+        };
+
+        win_default {
+            bindings = <
+&kp ESC          &kp LC(W)    &kp LC(P)  &kp LC(R)    &kp TAB                                                      &kp LC(UP)           &kp F15              &mt F13 HOME  &kp UP    &mt F14 END
+&kp LC(A)        &lt 7 LC(S)  &kp LC(D)  &lt 4 LG(F)  &search_shortcut                        &kp LG(KP_NUMBER_0)  &mt LG(H) LG(SPACE)  &kp LA(RIGHT_ARROW)  &kp LEFT      &kp DOWN  &kp RIGHT
+&mt LCTRL LC(Z)  &kp LC(X)    &kp LC(C)  &kp LC(V)    &kp LC(B)         &mt CAPSLOCK LANG2    &kp LANG1            &kp LG(U)            &kp LA(LEFT)         &mkp MB1      &mo 1     &mkp MB2
+&kp LSHFT        &kp LGUI     &kp LALT   &mo 3        &lt 2 SPACE       &mo 6                 &kp BSPC             &kp ENTER                                                         &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp LG(KP_MINUS) RG(KP_PLUS)>;
